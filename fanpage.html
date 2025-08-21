@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Justin Bieber Fan Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(135deg, #f59e0b, #f97316);
+      color: white;
+      padding: 40px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    img.hero {
+      margin-top: 20px;
+      border-radius: 15px;
+      max-width: 80%;
+      height: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .card {
+      background: #fafafa;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #f97316;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #ea580c;
+    }
+    footer {
+      background: #f3f4f6;
+      padding: 30px;
+      margin-top: 40px;
+    }
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #f97316;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Justin Bieber Fan Page</h1>
+    <p>Celebrating the music, life, and journey of Justin Bieber</p>
+  </header>
+
+  <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Justin_Bieber_in_2015.jpg" alt="Justin Bieber">
+
+  <section>
+    <div class="card">
+      <h2>About Justin</h2>
+      <p id="bio" style="display:none;">
+        Justin Bieber is a Canadian singer and songwriter who rose to fame with his debut single 
+        "One Time" in 2009. Known for hits like "Baby," "Sorry," and "Peaches," Bieber has become one 
+        of the most influential pop artists of the 21st century. His journey from a YouTube sensation 
+        to a global superstar inspires millions worldwide.
+      </p>
+      <button class="btn" onclick="toggleBio()">Read More</button>
+    </div>
+
+    <div class="card">
+      <h2>Top Songs</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li>Baby</li>
+        <li>Sorry</li>
+        <li>Love Yourself</li>
+        <li>Peaches</li>
+        <li>Ghost</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Latest Videos</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="https://www.youtube.com/user/JustinBieberVEVO" target="_blank">Official YouTube Channel</a></li>
+        <li>Behind The Scenes</li>
+        <li>Concert Performances</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <h3>Connect with Justin</h3>
+    <a href="https://www.instagram.com/justinbieber" target="_blank">Instagram</a> |
+    <a href="https://twitter.com/justinbieber" target="_blank">Twitter</a> |
+    <a href="https://www.youtube.com/user/JustinBieberVEVO" target="_blank">YouTube</a>
+  </footer>
+
+  <script>
+    function toggleBio() {
+      const bio = document.getElementById("bio");
+      const btn = document.querySelector(".btn");
+      if (bio.style.display === "none") {
+        bio.style.display = "block";
+        btn.textContent = "Show Less";
+      } else {
+        bio.style.display = "none";
+        btn.textContent = "Read More";
+      }
+    }
+  </script>
+
+</body>
+</html>
