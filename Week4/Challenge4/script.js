@@ -60,7 +60,7 @@ function generate_board() {
 
     for (let friend of friends){
         for (let fruit of fruits){
-            let cardName = `${friend}_${fruit}.jpg`;
+            let cardName = `${fruit}_${friend}.png`;
             for(i=0; i<2; i++){
             cardarray.push(cardName);
             }
@@ -90,6 +90,7 @@ function generate_board() {
 
     // YOUR CODE GOES HERE
 
+
     // You will need to rewrite the value of this result_str (String).
     let result_str = `
         <div style='color: red'>
@@ -97,8 +98,17 @@ function generate_board() {
             <p>Instead of paragraph texts, you will display cards here.</p>
         </div>
     `;
-
-
+    
+    var count = 0;
+    for (i=0; i<num_rows; i++){
+        result_str += `<div class='row'>`;
+        for (j=0; j<num_cols; j++){
+            let img = `${cardarray[count]}`;
+            result_str += `<div><img src='cards/${img}'></div>`
+            count++;
+        }
+        result_str += `</div>`;
+    }
     // DO NOT MODIFY THE FOLLOWING
     // Replace the innerHTML of <div id="game-board">
     //   with a newly prepared HTML string (result_str).
