@@ -135,3 +135,7 @@ function get_by_gender(gender) {
     console.log("**** [END] get_by_gender() *****");
 }
 
+window.onload = function() {
+  // Call your function here
+  get_all();
+};
